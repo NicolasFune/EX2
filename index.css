@@ -1,0 +1,50 @@
+*{
+    --cor-fundo-teste: black;
+}
+
+
+.container{
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
+.container > .azul{
+    width: 200px;
+    height: 200px;
+    background-color: var(--teste);
+    
+}
+.container > .vermelho{
+    width: 200px;
+    height: 200px;
+    background-color: var(--teste);
+}
+.container > .preto{
+    width: 200px;
+    height: 200px;
+    background-color: var(--teste);
+}
+
+
+/*Tablets*/
+@media only screen and (min-width: 600px) {
+    .container > .azul{
+        width: 210px;
+        height: 210px;
+    }
+    .container > .vermelho{
+        width: 210px;
+        height: 210px;
+    }
+    .container > .preto{
+        width: 210px;
+        height: 210px;
+    }
+}
+/*Desktop*/
+@media only screen and (min-width: 1030px) {
+}
