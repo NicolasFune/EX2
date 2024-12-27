@@ -3,6 +3,8 @@ body {
     margin: 0;
     box-sizing: border-box;
     height: 5000px;
+    background-image: linear-gradient(to left,#001EDB, #065CEB, #50A8EA, #B6D2EB );
+    background-attachment: fixed;
   
  
  }
@@ -17,41 +19,40 @@ body {
      border-radius: 16px;
      margin: 20px;
      align-self: center;
-
+     display: flex;
+     flex-direction: column;
     
            
  
  }
 
 
- nav > .fi{
+ nav > .logo-titulo >.logo{
 
-    margin: 20px 0px 20px 15px;
-     color: rgb(0, 0, 0);
-     float: left;
-     display: flex;
+     font-size: 40px;
+     color: black;
     
-  
  
  }
 
 
-nav > p {
+nav > .logo-titulo > p {
  
     margin-top: 0px;
     color: rgb(0, 0, 0);
-    display: flex; 
-    float: left;
     
 }
 
+nav > .nav-list {
+    list-style: none;
+}
 
-nav > a {
+
+nav > .nav-list > .list-item >  a {
     
     color: rgb(0, 0, 0);
- 
-    display: flex;
     text-decoration: none;
+
 
 
   
@@ -147,24 +148,18 @@ button:hover {
  /*Desktop*/
  @media only screen and (min-width: 600px) {
 
+    nav{
+        flex-direction: row;
+    }
 
- nav >  .fi {
-      
-     margin: 20px 0px 20px 15px;
-     color: rgb(0, 0, 0);
-     float: left;
-     display: flex;
+ nav > .logo-titulo >  .logo {
     
-  
-
- 
+     font-size: 40px;
  }
  
  nav p { 
 
      margin-top: 20px;
-     color: rgb(0, 0, 0);
-     display: flex; 
      padding: 14px 16px;
  
  }
@@ -173,63 +168,30 @@ button:hover {
  nav a {
  
      margin-top: 20px;
-     color: rgb(0, 0, 0);
-     display: flex;
-     float: right;
-     text-decoration: none;
      padding: 14px 16px;
    
  
  }
- 
- /*hover - significa " o que vai acontecer quando passar o mouse encima*/
- nav a:hover {
- 
-     transition: .5s;
-     background-color: rgb(0, 60, 
-     255);
-     color: white;
- 
- }
- 
+
  p{
-     font-family: Arial, Helvetica, sans-serif;
      font-size: 20px;
-     color: white;
-     float: left;
      padding: 14px 16px;
  }
  
  .images{
- 
-       display: grid;
-       grid-template-columns: repeat(10, .1fr);
-       grid-template-rows: repeat(20, .1fr);
        gap: 0.5rem;
- 
- 
  }
  
  .img{
    
      width: 90%;
      height: 100%;
-     object-fit: cover;
- 
- }
- 
- .item {
-      
-     overflow: hidden;
  
  }
  
  .num01 {
- 
- 
      grid-column: 1/ span 5;
      grid-row: 7/ span 10;
-   
  }
  
  .num02 {
@@ -249,38 +211,14 @@ button:hover {
  
  
  button {
-     
-     background-color: rgb(161, 205, 255);
      border-radius: 20px;
      font-size: 30px;
-     font-family: Arial, Helvetica, sans-serif;
      width: 100%;
      height: 100%;
- 
  }
  
- button:hover {
- 
-     transition: .1s;
-     background-color: rgb(0, 81, 255);
-     color:aliceblue;
-     border-color: black;
- 
- }
  
 }
- /*Celular*/
- @media only screen and (min-width: 600px) {
-
-
- 
- }
- 
- /*Tablets*/
- @media only screen and (min-width: 600px) {
- 
-     
- }
  
  
  
