@@ -1,66 +1,101 @@
-body {
 
+*{
     margin: 0;
-    box-sizing: border-box;
-    height: 5000px;
+    padding: 0;
+}
+body {
     background-image: linear-gradient(to left,#001EDB, #065CEB, #50A8EA, #B6D2EB );
     background-attachment: fixed;
-  
- 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   
+
  }
  
- nav  {
+ @font-face {
+    font-family: 'magic';
+    src: url('fontes/Magic Sky.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.menu-fixo {
  
      background-color: rgb(255, 255, 255);
-     overflow: hidden;
-     position: fixed;
-     width: 90%;
-     height: 20%;
+     width: 90vw;
+     height: 200px;
      border-radius: 16px;
-     margin: 20px;
-     align-self: center;
+     margin: 10px;
      display: flex;
+     justify-content: space-around;
      flex-direction: column;
-    
-           
+     max-width: 500px;
+      
  
  }
+ .menu-fixo > .logo-titulo {
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    height: 50px;
+ }
 
-
- nav > .logo-titulo >.logo{
-
+.menu-fixo > .logo-titulo > .logo{
      font-size: 40px;
      color: black;
-    
- 
  }
 
-
-nav > .logo-titulo > p {
- 
-    margin-top: 0px;
+ .menu-fixo > .logo-titulo > .titulo {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
     color: rgb(0, 0, 0);
-    
+    background-color: bisque;
+    margin-left: 20px;
 }
 
-nav > .nav-list {
+.menu-fixo > .nav-list {
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    
+    background-color: green;
+    padding: 10px;
+}
+.menu-fixo > .nav-list > .list-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    width: 200px;
+    padding: 10px;
+
 }
 
-
-nav > .nav-list > .list-item >  a {
+.menu-fixo > .nav-list > .list-item >  a {
     
     color: rgb(0, 0, 0);
     text-decoration: none;
-
-
-
-  
+    background-color: #50A8EA;
+   
 
 }
 
 /*hover - significa " o que vai acontecer quando passar o mouse encima*/
-nav a:hover {
+.menu-fixo a:hover {
 
     transition: .5s;
     background-color: rgb(0, 60, 255);
@@ -68,29 +103,24 @@ nav a:hover {
 
 }
 
-p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    color: white;
-    float: left;
-    padding: 14px 16px;
-}
 
 .images{
 
       display: grid;
-      grid-template-columns: repeat(8, .4fr);
-      grid-template-rows: repeat(30, .1fr);
-      gap: 0.5rem;
-
-
+      grid-template-columns: 100%;
+      grid-template-rows: 33% 33% 10%;
+      gap: 1.5rem;
+      margin:25px;
+      height: 380px;
+      max-width: 500px;
+    
 }
 
 .img{
-  
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+    object-fit: fill;
+
 
 }
 
@@ -103,27 +133,34 @@ p{
 .num01 {
 
   
-    grid-column: 1/ span 8;
-    grid-row: 9/ span 8;
+    grid-column: 1/ 1;
+    grid-row: 1/1;
 
   
 }
 
 .num02 {
-
-    grid-column: 1/ span 8;
-    grid-row: 16/ span 10;
+    
+    font-family: 'magic';
+    font-size: 15px;
+    color: white;
+    float: left;
+    margin-top: 15px;
+    text-align:justify;
+    grid-column: 1/1;
+    grid-row: 2/2;
   
 }
 
 .num03 {
-    
-     
-    grid-column: 2/ span 6 ;
-    grid-row: 25/ span 5;
+    grid-column: 1/1 ;
+    grid-row: 3/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   
 }
-
 
 button {
     
@@ -131,8 +168,8 @@ button {
     border-radius: 20px;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 33%;
+    width: 50%;
+    height: 100%;
 
 }
 
@@ -146,80 +183,57 @@ button:hover {
 }
 
  /*Desktop*/
- @media only screen and (min-width: 600px) {
-
-    nav{
+ @media only screen and (min-width: 1010px) {
+    .menu-fixo{
         flex-direction: row;
+        justify-content: space-between;
+        height: 100px;
+        max-width: 10000px;
+    }
+    .menu-fixo > .logo-titulo{
+        margin-left: 20px;
+        height: 100px;
+        padding: 0;
     }
 
- nav > .logo-titulo >  .logo {
-    
-     font-size: 40px;
- }
- 
- nav p { 
+    .menu-fixo > .nav-list {
+        flex-direction: row;
+        height: 100%;
+        width: 40%;
+        padding: 0;
+    }
+    .menu-fixo > .nav-list > .list-item{
+        width: 50px;
+    }
 
-     margin-top: 20px;
-     padding: 14px 16px;
- 
- }
- 
- 
- nav a {
- 
-     margin-top: 20px;
-     padding: 14px 16px;
-   
- 
- }
+    .images{
 
- p{
-     font-size: 20px;
-     padding: 14px 16px;
- }
- 
- .images{
-       gap: 0.5rem;
- }
- 
- .img{
-   
-     width: 90%;
-     height: 100%;
- 
- }
- 
- .num01 {
-     grid-column: 1/ span 5;
-     grid-row: 7/ span 10;
- }
- 
- .num02 {
- 
-     grid-column: 6/ span 10 ;
-     grid-row: 6/ span 10;
-   
- }
- 
- .num03 {
- 
-  
-     grid-column: 6/ span 5 ;
-     grid-row: 16/ span 2;
-   
- }
- 
- 
- button {
-     border-radius: 20px;
-     font-size: 30px;
-     width: 100%;
-     height: 100%;
- }
- 
- 
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 90% 10%;
+        gap: 0rem;
+
+        width: 90vw;
+        max-width: 10000px;
+  }
+  .num01 {
+    grid-column: 1/1;
+    grid-row: 1/ span 2;
+
+
+}
+
+.num02 {
+    margin: 0;
+    grid-column: 2/ 2;
+    grid-row: 1/1;
+    padding-left: 20px;
+
+}
+.num03 {
+    grid-column: 2/ 2;
+    grid-row: 2/2;
+
 }
  
  
- 
- 
+}
